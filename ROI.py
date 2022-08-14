@@ -1,7 +1,7 @@
 import streamlit as st
 import funct
 import cv2 as cv
-file1 = st.file_uploader("Select the files in  such a way that second file is watermark file", type="jpg", 'png'], accept_multiple_files=True)
+file1 = st.file_uploader("Select the files in  such a way that second file is watermark file", type=["jpg", 'png'], accept_multiple_files=True)
 for uploaded_file in file1:
         file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
         def ROI():
